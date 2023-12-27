@@ -1,11 +1,16 @@
+import useFetch from "../../hooks/useFetch";
 import "./featured.css";
 import { motion } from "framer-motion";
 
 const Featured = () => {
+  const { data, loading, error } = useFetch(
+    "http://localhost:8800/api/hotels/countByCity?cities=lisbon,porto,algarve,setubal"
+  );
+  console.log(data);
+
   return (
     <>
       <h1>Locations</h1>
-
       <div className="featured">
         <div className="featuredItem">
           <motion.div
@@ -45,7 +50,6 @@ const Featured = () => {
               className="featuredImg"
             />
           </motion.div>
-
           <div className="featuredTitles">
             <h1>Reno</h1>
             <h2>533 properties</h2>

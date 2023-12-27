@@ -20,7 +20,6 @@ const PropertyType = () => {
             className="pListImg"
           />
         </motion.div>
-
         <div className="pListTitles">
           <h1>Hotels</h1>
           <h2>233 hotels</h2>
